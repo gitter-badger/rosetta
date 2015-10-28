@@ -20,6 +20,7 @@ build/
 #
 # intelliJ
 #
+rosetta.iml
 .idea/
 ide/intellij/
 rosetta.iml

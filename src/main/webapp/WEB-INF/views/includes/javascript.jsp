@@ -48,5 +48,5 @@
    <script type="text/javascript" src="resources/js/SlickGrid/custom/headerLineSelection.js"></script>
    <script type="text/javascript" src="resources/js/SlickGrid/custom/delimiterSelection.js"></script>
    <script type="text/javascript" src="resources/js/SlickGrid/custom/variableSpecification.js"></script>
-
-
+   <!-- webgl Earth -->
+   <script src="http://www.webglearth.com/v2/api.js"></script>
