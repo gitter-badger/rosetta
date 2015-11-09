@@ -404,9 +404,12 @@ function specifyPlatformMetadata(stepType, stepData) {
         }
     } else if (stepType == "repopulateStep") {
         if ((stepData[0].type == "previous") || (stepData[0].type == "next")) {
-            if (getItemEntered("platformMetadata", "platformName") != null ) {
-                if (getItemEntered("platformMetadata", "latitude") != null ) {
-                    if (getItemEntered("platformMetadata", "longitude") != null ) {
+            if (getItemEntered("platformMetadata", "latitude") != null ) {
+                if (getItemEntered("platformMetadata", "longitude") != null ) {
+                    if (getItemEntered("platformMetadata", "platformName") != null ) {
+                        updateLocationVisMarker(getItemEntered("platformMetadata", "latitude"),
+                                                getItemEntered("platformMetadata", "longitude"),
+                                                getItemEntered("platformMetadata", "platformName"));
                         if (getItemEntered("platformMetadata", "altitude") != null ) {
                             $("#faux").remove();
                             $(".jw-button-next").removeClass("hideMe");
@@ -458,9 +461,13 @@ function specifyPlatformMetadata(stepType, stepData) {
             }
 
             // see if we can expose the next button
-            if (getItemEntered("platformMetadata", "platformName") != null ) {
-                if (getItemEntered("platformMetadata", "latitude") != null ) {
-                    if (getItemEntered("platformMetadata", "longitude") != null ) {
+
+            if (getItemEntered("platformMetadata", "latitude") != null ) {
+                if (getItemEntered("platformMetadata", "longitude") != null ) {
+                        updateLocationVisMarker(getItemEntered("platformMetadata", "latitude"),
+                                                getItemEntered("platformMetadata", "longitude"),
+                                                getItemEntered("platformMetadata", "platformName"));
+                    if (getItemEntered("platformMetadata", "platformName") != null ) {
                         if (getItemEntered("platformMetadata", "altitude") != null ) {
                             moveAlongInput = true;
                             if (moveAlongSelect) {
@@ -485,7 +492,7 @@ function specifyPlatformMetadata(stepType, stepData) {
             if (getItemEntered("platformMetadata", "altitudeUnits") != null ) {
                 if (getItemEntered("platformMetadata", "latitudeUnits") != null ) {
                     if (getItemEntered("platformMetadata", "longitudeUnits") != null ) {
-                        moveAlongSelect = true
+                        moveAlongSelect = true;
                         if (moveAlongInput) {
                             $("#faux").remove();
                             $(".jw-button-next").removeClass("hideMe");
@@ -624,7 +631,6 @@ function restoreSession(stepType, stepData) {
 
     }
 }
-
 
 function stepTemplate(stepType, stepData) {
     if (stepType == "stepValidation") {

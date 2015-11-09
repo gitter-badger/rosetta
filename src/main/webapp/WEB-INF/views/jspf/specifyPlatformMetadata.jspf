@@ -1,3 +1,7 @@
+<!-- location visualization -->
+<div id="location_vis_globe_view">
+    <div id="location_vis_earth_div"></div>
+</div>
 <c:choose>
     <c:when test="${fn:length(platformMetadataItems) gt 0}">
         <ul>
