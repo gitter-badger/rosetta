@@ -72,15 +72,17 @@ public class TemplateController implements HandlerExceptionResolver {
     @Resource(name = "fileValidator")
     private FileValidator fileValidator;
 
+    private RosettaProperties rosettaProperties = new RosettaProperties();
+
     private String getDownloadDir() {
         String downloadDir = "";
-        downloadDir = RosettaProperties.getDownloadDir();
+        downloadDir = rosettaProperties.getDownloadDir();
         return downloadDir;
     }
 
     private String getUploadDir() {
         String uploadDir = "";
-        uploadDir = RosettaProperties.getUploadDir();
+        uploadDir = rosettaProperties.getUploadDir();
         return uploadDir;
     }
 

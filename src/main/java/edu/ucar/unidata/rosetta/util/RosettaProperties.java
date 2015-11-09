@@ -6,13 +6,25 @@ import java.util.List;
 import java.util.Properties;
 
 import org.apache.commons.io.FilenameUtils;
+import org.apache.log4j.Logger;
 
 public class RosettaProperties {
 
     private static String defaultConfigFileName = "defaultRosettaConfig.properties";
     private static String configFileName = "rosettaConfig.properties";
+    // if this property does not exist, set to null because you cannot continue
     private static String ROSETTA_HOME = System.getProperty(
-            "rosetta.content.root.path", "../content");
+            "rosetta.content.root.path", null);
+
+    protected static Logger logger = Logger.getLogger(RosettaProperties.class);
+
+    public RosettaProperties() {
+        if (ROSETTA_HOME == null) {
+            logger.error("You must set a location for the rosetta content directory:");
+            logger.error("    -Drosetta.content.root.path=/path/to/dir");
+            throw new RuntimeException("You must set a location for the rosetta content directory. Set the java VM option -Drosetta.content.root.path");
+        }
+    }
 
     public static String getDownloadDir() {
         Properties props = getRosettaProps();
@@ -58,7 +70,7 @@ public class RosettaProperties {
                 defaultConfigFileName);
         File configFile = new File(config);
         if (!configFile.exists()) {
-            System.out.println("creating defautl config");
+            System.out.println("creating default config");
             createDefaultConfigFile();
         }
         return config;

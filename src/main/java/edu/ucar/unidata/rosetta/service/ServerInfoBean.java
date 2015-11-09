@@ -15,6 +15,7 @@ public class ServerInfoBean implements ServletContextAware {
     private static class ServerInfo {
         private String version = "local development";
         private String buildDate = "development";
+
         private ServletContext servletContext = null;
 
         private void init() {
@@ -66,10 +67,18 @@ public class ServerInfoBean implements ServletContextAware {
     }
 
     public static String getVersion() {
-        return serverInfo.getVersion();            
+        String version = "local development";
+        if (serverInfo != null) {
+            version = serverInfo.getVersion();
+        }
+        return version;
     }
 
     public static String getBuildDate() {
-        return serverInfo.getBuildDate();
+        String buildDate = "local development";
+        if (serverInfo != null) {
+            buildDate = serverInfo.getBuildDate();
+        }
+        return buildDate;
     }
 }
