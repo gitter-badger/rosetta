@@ -44,6 +44,11 @@
 
 /* current menu step */
 .jw-menu .jw-current {
+ background: #FFFFFF url('../../img/current.png') 0 5px no-repeat !important;
+ padding-left: 20px;
+ font-weight: bold;
+}
+.jw-menu .ui-state-highlight {
  background: #FFFFFF url('../../img/current.png') 0 5px no-repeat !important; 
  padding-left: 20px; 
  font-weight: bold;

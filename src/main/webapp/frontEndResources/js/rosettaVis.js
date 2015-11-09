@@ -1,6 +1,5 @@
 var earth;
 var marker;
-document.getElementById("updateLocation").onclick = updateLocationVisMarker;
 
 function initLocationVis() {
     earth = new WE.map('location_vis_earth_div');

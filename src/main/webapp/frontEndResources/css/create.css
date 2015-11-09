@@ -296,14 +296,15 @@ ul li label img {
 }
 
 /* location on globe vis related css */
-#globe_view {
- width: 300px;
- height: 300px;
+#location_vis_globe_view {
+ left: 280px;
+ top: 250px;
+ width: 200px;
+ height: 200px;
  position: fixed;
- right: 10%;
 }
 
-#earth_div {
+#location_vis_earth_div {
  height: 100%;
  width: 100%;
  position: relative;

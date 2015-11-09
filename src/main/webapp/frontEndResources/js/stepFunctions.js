@@ -447,6 +447,10 @@ function specifyPlatformMetadata(stepType, stepData) {
         }
 
     } else if (stepType == "stepFunctions") {
+
+        // initilize location viz
+        initLocationVis();
+
         var stepElement = "#step" + stepData + " input";
         var moveAlongInput  = false;
         var moveAlongSelect = false;
@@ -481,7 +485,7 @@ function specifyPlatformMetadata(stepType, stepData) {
         });
 
         var stepElementSelect = "#step" + stepData + " select";
-        // grab initial values for tje select elements
+        // grab initial values for the select elements
         $(stepElementSelect).each(function() {
             if ($(this).attr("value") != "") {
                 // add to the session
@@ -612,7 +616,7 @@ function restoreSession(stepType, stepData) {
         $.post("restoreFromZip",
             sessionData,
             function(data) {
-                console.warn(data);
+                //console.warn(data);
                 var restoredSessionStorage = JSON.parse(data);
                 for(var item in restoredSessionStorage) {
                     addToSession(item, restoredSessionStorage[item]);

@@ -1,6 +1,8 @@
   <!-- jQuery -->
   <!-- having to use an older version of jQuery (pre 9) as jWizard uses depracted jQuery method .live()-->
-   <script type="text/javascript" src="resources/js/jQuery/jquery-1.8.3.min.js"></script>
+  <script type="text/javascript" src="resources/js/jQuery/jquery-1.11.3.js"></script>
+  <script type="text/javascript" src="resources/js/jQuery/ui/jquery-ui.js"></script>
+   <!--script type="text/javascript" src="resources/js/jQuery/jquery-1.8.3.min.js"></script>
    <script type="text/javascript" src="resources/js/jQuery/ui/jquery-ui.custom.min.js"></script>
    <script type="text/javascript" src="resources/js/jQuery/ui/jquery.ui.autocomplete.min.js"></script>
    <script type="text/javascript" src="resources/js/jQuery/ui/jquery.ui.button.min.js"></script>
@@ -11,11 +13,11 @@
    <script type="text/javascript" src="resources/js/jQuery/ui/jquery.ui.mouse.min.js"></script>
    <script type="text/javascript" src="resources/js/jQuery/ui/jquery.ui.position.min.js"></script>
    <script type="text/javascript" src="resources/js/jQuery/ui/jquery.ui.resizable.min.js"></script>
-   <script type="text/javascript" src="resources/js/jQuery/ui/jquery.ui.widget.min.js"></script>
+   <script type="text/javascript" src="resources/js/jQuery/ui/jquery.ui.widget.min.js"></script-->
 
 
   <!-- jWizard -->
-   <script type="text/javascript" src="resources/js/jWizard/jquery.jWizard.min.js"></script>
+   <script type="text/javascript" src="resources/js/jWizard/jquery.jWizard.js"></script>
 
 
   <!-- Validation -->
@@ -50,3 +52,4 @@
    <script type="text/javascript" src="resources/js/SlickGrid/custom/variableSpecification.js"></script>
    <!-- webgl Earth -->
    <script src="http://www.webglearth.com/v2/api.js"></script>
+   <script type="text/javascript" src="resources/js/rosettaVis.js"></script>
