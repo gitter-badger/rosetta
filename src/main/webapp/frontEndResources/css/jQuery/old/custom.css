@@ -5,30 +5,20 @@
  * (no-theme) distribution, or custom jQuery UI-related style changes. 
  */
 
-li.ui-state-highlight a {
- padding: .25em .5em;
- margin-bottom: .25em;
- cursor: pointer;
- font-weight: bold;
-}
-
-/* UI dialog widget
+/* UI dialog widget */
 .ui-dialog {
  background: #FFFFFF;
  border: 1px solid #AAAAAA;
 }
 
-*/
-
-/* UI dialog widget overlay
+/* UI dialog widget overlay */
 .ui-widget-overlay { 
  background: #AAAAAA url(../../img/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x ;
  opacity: .5;
  filter:Alpha(Opacity=50);
 }
-*/
 
-/* UI dialog widget title bar
+/* UI dialog widget title bar */
 .ui-dialog-titlebar {
  margin: 5px 5px 0 5px;
  border: 1px solid #AAAAAA;
@@ -36,16 +26,14 @@ li.ui-state-highlight a {
  color: #222222;
  font-weight: bold;
 }
-*/
 
-/* UI dialog widget title bar close button
+/* UI dialog widget title bar close button */
 .ui-dialog-titlebar-close {
  background: transparent url(../../img/ui-icons_222222_256x240.png) -94px -128px no-repeat !important;
  border: none;
 }
-*/
 
-/* UI dialog widget buttons
+/* UI dialog widget buttons */
 .ui-dialog-buttonset button {
  background: #DADADA url(../../img/ui-bg_glass_75_dadada_1x400.png) 50% 50% repeat-x; 
  -moz-border-radius: 4px;
@@ -58,17 +46,16 @@ li.ui-state-highlight a {
  margin-left: 1em;
  color: #555555 !important;
 }
- */
-
-/* UI dialog widget expand/gripper
+ 
+/* UI dialog widget expand/gripper */
 .ui-icon-gripsmall-diagonal-se {
  padding: 0 10px 10px 0;
  margin: 0;
  background: transparent url(../../img/ui-icons_222222_256x240.png) -80px -224px no-repeat !important;
 }
- */
 
-/* the standard name auto complete stuff for the variable name selection section
+
+/* the standard name auto complete stuff for the variable name selection section */
 .ui-autocomplete {
  border: 1px solid #AAAAAA;
  background-color: #CFCFCF;
@@ -79,9 +66,7 @@ li.ui-state-highlight a {
  padding-right: 20px;
 }
 
-*/
-
-/* UI theme-like formatting for corners
+/* UI theme-like formatting for corners */
 .ui-corner-all,
 .ui-corner-top,
 .ui-corner-left,
@@ -109,10 +94,7 @@ li.ui-state-highlight a {
 .ui-corner-br {
  border-bottom-right-radius: 4px;
 }
-*/
 
-/*
 .ui-tooltip {
  background-color: #EFEFEF;
 }
-*/

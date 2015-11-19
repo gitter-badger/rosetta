@@ -13,33 +13,33 @@ $(document).ready(function($) {
     var faux = '<div id="faux" class="ui-corner-all disabled">Next</div>';
 
     // this hides the quick save button in the footer...is enabled once a file is uploaded.
-    $("#quickSaveButton").addClass("hideMe")
+    $("#quickSaveButton").addClass("hideMe");
 
     // instantiate jWizard!
     $w = $("#FORM");
     $w.validate();
     $w.jWizard({
-        menuEnable: true,
-        titleHide: false,
-        buttons : {
-            finishType : "button"
-        }
-    })
+      menu: true,
+      title: true,
+      progress: false,
+      finish: {
+        type: "button"
+      }
+    }).bind("jwizardchangestep", function (event, ui) {
+        /**
+         * The bindings below are event handlers, they will all be executed before proceeding to the callback
+         *
+         * ui = {
+         *       type: "previous|next|first|last|manual",
+         *       currentStepIndex: [int],
+         *       nextStepIndex: [int]
+         * };
+             */
 
-    /** 
-     * The bindings below are event handlers, they will all be executed before proceeding to the callback 
-     *
-     * ui = {
-     *       type: "previous|next|first|last|manual",
-     *       currentStepIndex: [int],
-     *       nextStepIndex: [int]
-     * }; 
-     */
+        /**
+         * Handling custom navigation through the wizard
+         */
 
-    /** 
-     * Handling custom navigation through the wizard     
-     */
-    .bind("jwizardchangestep", function(event, ui) {
         // "manual" is always triggered by the user, never jWizard itself
         if (ui.type !== "manual") {         
            $("#faux").remove();

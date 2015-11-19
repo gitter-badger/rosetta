@@ -1,5 +1,5 @@
   <!-- jQuery -->
-   <link type="text/css" rel="stylesheet" href="resources/css/jQuery/jquery-ui-1.10.0.custom.min.css" />
+   <link type="text/css" rel="stylesheet" href="resources/css/jQuery/jquery-ui-1.11.4.min.css" />
 
   <!-- jWizard -->
    <link type="text/css" rel="stylesheet" href="resources/css/jWizard/jWizard.base.css" />
